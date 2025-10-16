@@ -166,6 +166,57 @@ window.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    // Menu hamburguer
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', function () {
+            menuToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Fechar menu ao clicar em um link
+        const navLinks = navMenu.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                menuToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Fechar menu ao clicar fora
+        document.addEventListener('click', function (event) {
+            const isClickInsideMenu = navMenu.contains(event.target);
+            const isClickOnToggle = menuToggle.contains(event.target);
+
+            if (!isClickInsideMenu && !isClickOnToggle && navMenu.classList.contains('active')) {
+                menuToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+            }
+        });
+    }
+
+    // Responsividade do carrossel
+    function ajustarCarrossel() {
+        const larguraJanela = window.innerWidth;
+
+        if (larguraJanela <= 768) {
+            itensPorVez = 1;
+        } else if (larguraJanela <= 992) {
+            itensPorVez = 2;
+        } else {
+            itensPorVez = 3;
+        }
+
+        // Atualizar a posição do slide
+        moverSlide();
+    }
+
+    // Ajustar no carregamento e no redimensionamento
+    ajustarCarrossel();
+    window.addEventListener('resize', ajustarCarrossel);
+
 });
 
 function hideMapLoading() {
