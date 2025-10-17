@@ -1079,7 +1079,7 @@ a {
     }
 
     .top-contact-item span {
-        display: inline;
+        display: none;
     }
 
     .top-contact-item i {
@@ -1518,9 +1518,6 @@ a {
     }
 }
 
-/* ============================================
-   ESTILOS DO CARROSSEL DE MATERIAIS
-   ============================================ */
 
 /* Container principal do carrossel */
 .carrossel-container {
@@ -1709,11 +1706,12 @@ a {
 
     .material-item .gallery-img img {
         height: 220px;
+        
     }
 
     .material-item .material-name {
         font-size: 1.2em;
-        margin-top: 15px;
+        margin-top: 35px;
     }
 
     .material-item .material-description {
@@ -1750,6 +1748,7 @@ a {
 
     .material-item .material-name {
         font-size: 1.1em;
+        margin-top: 25px;
     }
 
     .material-item .material-description {
