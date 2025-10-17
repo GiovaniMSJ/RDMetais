@@ -684,7 +684,7 @@ a {
 
 .contact-container {
     max-width: 700px;
-    width: 100%;
+    width: 700px;
     background-color: white;
     color: black;
     padding: 25px;
@@ -700,7 +700,7 @@ a {
 
 .contact-container-medium {
     max-width: 700px;
-    width: 100%;
+    width: 700px;
     background-color: white;
     color: black;
     padding: 25px;
@@ -716,7 +716,7 @@ a {
 
 .contact-container-small {
     max-width: 700px;
-    width: 100%;
+    width: 700px;
     background-color: white;
     color: black;
     padding: 25px;
@@ -753,7 +753,11 @@ a {
     flex: 1;
 }
 
-.text_contact {
+.text_contact,
+.text_contact_cellphone,
+.text_contact_address,
+.text_contact_email,
+.text_contact_hours {
     font-size: 1.4rem;
     font-weight: 700;
     color: #333;
@@ -761,7 +765,9 @@ a {
     line-height: 1.2;
 }
 
-.paragrafo_contact {
+.paragrafo_contact,
+.paragrafo_contact_cellphone,
+.paragrafo_contact_email {
     color: #666;
     font-size: 1rem;
     line-height: 1.6;
@@ -800,7 +806,7 @@ a {
 
 .mapa {
     align-self: end;
-    margin-bottom: 80px;
+    margin-bottom: 35px;
 }
 
 .mapBox {
@@ -814,7 +820,7 @@ a {
 
 .mapBox iframe {
     width: 100%;
-    height: 500px;
+    height: 600px;
     border: none;
 }
 
@@ -843,8 +849,8 @@ a {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background: #333;
-    color: white;
+    background: white;
+    color: #333;
     border: 3px solid rgb(255, 140, 0);
     border-radius: 50%;
     width: 45px;
@@ -864,7 +870,7 @@ a {
 }
 
 .back-to-top:hover {
-    background: rgb(255, 140, 0);
+    background: white;
     color: #333;
     border: 3px solid #333;
 }
@@ -1406,13 +1412,46 @@ a {
     .contact-container,
     .contact-container-medium,
     .contact-container-small {
-        width: 100%;
-        max-width: 100%;
+        width: 350px;
         padding: 20px;
         margin: 0 auto 15px;
         display: flex;
         flex-direction: column;
+    }
+
+    .text_contact_cellphone {
         text-align: center;
+        margin-left: 95px;
+    }
+
+    .text_contact_address {
+        text-align: center;
+        margin-left: 35px;
+    }
+
+    .text_contact_email {
+        text-align: center;
+        margin-left: 65px;
+    }
+
+    .text_contact_hours{
+        text-align: center;
+        margin-left: 15px;
+    }
+
+    .paragrafo_contact {
+        text-align: center;
+        margin-left: 35px;
+    }
+
+    .paragrafo_contact_cellphone {
+        text-align: center;
+        margin-left: 95px;
+    }
+
+    .paragrafo_contact_email{
+        text-align: center;
+        margin-left: 65px;
     }
 
     .contact-icon {
@@ -1431,6 +1470,10 @@ a {
 
     .mapa {
         margin-bottom: 40px;
+    }
+
+    .mapBox{
+        width: 430px;
     }
 }
 
@@ -1706,7 +1749,7 @@ a {
 
     .material-item .gallery-img img {
         height: 220px;
-        
+
     }
 
     .material-item .material-name {
