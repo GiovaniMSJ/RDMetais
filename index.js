@@ -1,6 +1,6 @@
 window.addEventListener('DOMContentLoaded', function () {
     var posicaoAtual = 0;
-    var totalItens = 6;
+    var totalItens = 8;
     var itensPorVez = 3;
 
     var slide = document.getElementById('slide');
@@ -34,7 +34,6 @@ window.addEventListener('DOMContentLoaded', function () {
             slide.style.transform = 'translateX(-' + deslocamento + '%)';
 
             if (posicaoAtual >= totalItens) {
-                console.log('🔄 Chegou no clone! Resetando instantaneamente...');
                 setTimeout(function () {
                     slide.style.transition = 'none';
                     posicaoAtual = 0;
@@ -209,11 +208,9 @@ window.addEventListener('DOMContentLoaded', function () {
             itensPorVez = 3;
         }
 
-        // Atualizar a posição do slide
         moverSlide();
     }
 
-    // Ajustar no carregamento e no redimensionamento
     ajustarCarrossel();
     window.addEventListener('resize', ajustarCarrossel);
 
