@@ -575,6 +575,7 @@ a {
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    width: 100%;
     max-width: 800px;
     width: 750px;
     margin: 0 auto;
@@ -827,7 +828,21 @@ a {
 
     .map {
         width: 100%;
-        max-width: 300px;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .mapBox {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 900px) {
+    .map {
+        width: 100%;
+        max-width: 750px;
         margin: 0 auto;
     }
 }
@@ -962,7 +977,7 @@ a {
     }
 
     .mapBox iframe {
-        height: 350px;
+        height: 300px;
     }
 
     .back-to-top {
